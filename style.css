@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-bg-video {
+#bg-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,5 +14,20 @@ bg-video {
     height: auto;
     z-index: -1;
     object-fit: cover;
-    background: block;
+    background: black;
+}
+
+.typing-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    border-right: 2px solid white;
+    white-space: pre-line;
+    overflow: hidden;
+    max-width: 800px;
+    line-height: 1.5;
+    margin: 150px auto;
+    text-align: center;
+
 }
