@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoThink</title>
     <link rel="icon" href="asset/eco-favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Bitcount:wght@100..900&family=Griffy&family=Nosifer&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+NSW:wght@100..400&family=Rouge+Script&display=swap" rel="stylesheet">
@@ -23,8 +24,11 @@
     </script>
 </head>
 <body>
-     
-    <header class="bg-white/80 shadow sticky top-0 z-50">
+     <video autoplay muted loop playsinline id="bg-video" poster="asset/eco-bg-1.png">
+        <source src="asset/bg-video-eco.mp4" type="video/mp4">
+        Oh No ! Your browser does not support the video tag. 
+     </video> 
+    <header class="bg-transparent shadow sticky top-0 z-50">
         <div class="container mx-auto px-7 flex justify-between items-center">
             <h1 class="font-headings font-semibold text-3xl text-green-700">LOVE  FOR THE PLANT <3 </h1>
             <nav class="space-x-4 hidden md:block">
@@ -36,50 +40,50 @@
         </div>
     </header>
 
-    <section class="bg-violet-100" py-20 text-center>
+    <section class="bg-transparent py-20 text-center">
         <div>
         <h2 class="font-body text-3.5xl md:text-3xl font-bold text-green-800 font-family-cursive">Saving Planet in any Way is Our Website's To-Must-Do Thing ! </h2>  <br> <h3 class="font-headings text-3xl text-green-900">Join Us</h3>
         
     </div>
     </section>
 
-    <section id="tips" class="py-16 bg-white">
+    <section id="tips" class="py-16 bg-transparent">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-cyan-700">Eco Tips</h2>
-            <div class="grid gap-7 md:grid-cols-3">
-                <div class="bg-violet-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h2 class="text-3xl text-center font-bold text-center mb-12 text-cyan-700">Eco Tips</h2>
+            <div class="grid gap-7 text-center md:grid-cols-3">
+                <div class="bg-transparent p-6 rounded-xl shadow hover:shadow-lg transition">
                 <img src="asset/recycle-eco.png" alt="recycle image" class="rounded mb-5">
-                <h3 class="text-xl font-semibold mb-3">Recyle Smart</h3>
-                <p class="text-xl text-green-900 font-body">Plese don't forget to check the guidline related to recycling</p>
+                <h3 class="text-3xl text-green-800 font-body font-semibold mb-3">Recyle Smart</h3>
+                <p class="text-2xl text-green-900 font-body">Plese don't forget to check the guidline related to recycling</p>
             </div>
         
-            <div class="bg-violet-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <div class="bg-transparent text-center p-6 rounded-xl shadow hover:shadow-lg transition">
               <img src="asset/recycle-eco.png" alt="Reuse Image" class="rounded mb-4"> 
-              <h3 class="text-xl font-semibold mb-2">Do use Reusables</h3>
-              <p>It's always better to carry a reusable bottle rather than single-used plastics.</p>
+              <h3 class="text-3xl text-green-800 font-semibold font-body mb-2">Do use Reusables</h3>
+              <p class="font-body text-2xl text-green-900 mb-2">It's always better to carry a reusable bottle rather than single-used plastics.</p>
             </div>
-            <div class="bg-violet-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+            <div class="bg-transparent text-center p-6 rounded-xl shadow hover:shadow-lg transition">
                 <img src="asset/plant-eco.png" alt="Plant Image">
-                <h3 class="text-xl font-semibold mb-2">Love to plant a Tree</h3>
-                <p>Do participate in Environment Activities and plant your own at home.</p>
+                <h3 class="text-3xl text-green-800 font-body font-semibold mb-2">Love to plant a Tree</h3>
+                <p class="font-body text-2xl text-green-900">Do participate in Environment Activities and plant your own at home.</p>
             </div>
         </div>
     </div>
     </section>
 </div>
-    <section id="faq" class="bg-white py-16">
+    <section id="faq" class="bg-transparent font-headings py-16">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-8 text-center text-green-700">Frequently Asked Questions</h2>
             <div class="space-y-4 max-w-2xl mx-auto">
-                <details class="bg-violet-50 p-4 rounded shadow text-violet-700">
+                <details class="bg-transparent p-4 rounded shadow text-violet-700">
                     <summary class="cursor-pointer font-medium">Why EcoThink?</summary>
                     <p class="text-green-700">EcoThink makes you aware of the global-warming and climate change of our Earth.</p>
                 </details>
-                <details class="bg-violet-50 p-4 rounded shadow">
+                <details class="bg-transparent p-4 rounded shadow">
                     <summary class="cursor-pointer font-medium text-violet-700">How to protect our planet from global global-warming?</summary>
                     <p class="text-green-700">To protect, we should focus on reducing the carbon footprint through energy conservation, sustainable transportation, and mindful consumption.</p>
                 </details>
-                <details class="bg-violet-50 p-4 rounded shadow">
+                <details class="bg-transparent p-4 rounded shadow">
                     <summary class="cursor-pointer font-medium text-violet-700">How does Climate Change affect us(human-beings)?</summary>
                     <p class="text-green-700">It significantly affects human beings throungh various things but mostly by impacting health, food security, livelihoods, and displacement. These impacts include more frequently and intense extreme weather events, disruptions to food production, increased spread of diseases, and displacement due to climate-related disasters</p>
                 </details>
@@ -87,7 +91,7 @@
         </div>
     </section>
 
-    <section id="pledge"  class="bg-violet-100 py-16">
+    <section id="pledge"  class="bg-transparent py-16">
         <div class="container mx-auto px-6 max-w-xl">
             <h2 class="text-3xl font-bold text-green-800 text-center mb-6">Make your Pledge</h2>
             <form class="bg-white p-6 rounded-xl shadow space-y-4" onsubmit="savePledge(event)">
@@ -99,7 +103,7 @@
         </div>
     </section>
 
-    <footer class="bg-white border-t py-6 text-center">
+    <footer class="bg-transparent border-t py-6 text-center">
         <div>
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
            <p class="font-bold text-green-700 text-center">&copy; 2025 EcoThink. Made By Madiha Mubeen</p> 
