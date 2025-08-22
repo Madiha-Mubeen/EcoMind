@@ -24,8 +24,8 @@
     </script>
 </head>
 <body>
-     <video autoplay muted loop playsinline id="bg-video" poster="asset/eco-bg-1.png">
-        <source src="asset/bg-video-eco.mp4" type="video/mp4">
+     <video autoplay muted loop playsinline id="bg-video" poster="asset/eco-bg-1.png" class="fixed top-0 left-0 w-full h-full object-cover -z-10">
+        <source src="asset/bg-video-eco.mp4" type="video/mp4" >
         Oh No ! Your browser does not support the video tag. 
      </video> 
 
@@ -44,7 +44,7 @@
 
     <section class="bg-transparent py-20 text-center">
         <div>
-        <h2 class="font-body text-3.5xl md:text-3xl font-bold text-green-800 font-family-cursive">Saving Planet in any Way is Our Website's To-Must-Do Thing ! </h2>  <br> <h3 class="font-headings text-3xl text-green-900">Join Us</h3>
+        <h2 class="font-body text-5xl md:text-5xl font-bold text-green-800 font-family-cursive">Saving Planet in any Way is Our Website's To-Must-Do Thing ! </h2>  <br> <h3 class="font-headings text-3xl text-amber-600">Join Us</h3>
         <details>
             <summary class="cursor-pointer text-3xl md:text-4xl font-bold font-body text-green-900">How can you join ?</summary>
             <p class="font-body text-3xl text-green-800 py-6 font-semibold">Well, you can do by taking any initiative towards any step thats Grows plants & Save Plants</p>
@@ -52,28 +52,34 @@
     </div>
     </section>
 
-    <h1 class="typing-text text-5xl font-body text-emerald-800"></h1>
+    <h1 class="typing-text text-5xl font-body text-white"></h1>
 
     <section id="tips" class="py-16 bg-transparent">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl text-center font-bold text-center mb-12 text-cyan-700">Eco Tips</h2>
-            <div class="grid gap-7 text-center md:grid-cols-3">
-                <div class="bg-transparent p-6 rounded-xl shadow hover:shadow-lg transition">
-                <img src="asset/recycle-eco.png" alt="recycle image" class="rounded mb-5">
-                <h3 class="text-3xl text-green-800 font-body font-semibold mb-3">Recyle Smart</h3>
-                <p class="text-2xl text-green-900 font-body">Plese don't forget to check the guidline related to recycling</p>
+
+            <h2 class="text-6xl text-center font-body font-bold text-center mb-12 text-yellow-400">Eco Tips</h2>
+
+            <div class="space-y-6">
+
+            
+            <div class="bg-semi-transparent  p-6 rounded-3xl shadow hover:shadow-lg transition flex items-center gap-4">
+                <img src="asset/recycle-eco.png" alt="recycle image" class="w-34 h-34 object-contain mr-6 rounded">
+                <h3 class="text-4xl text-green-800 font-body font-semibold bg-green-200/60 mb-3">Recyle Smart</h3>
+                <p class="text-3xl text-green-900 bg-yellow-200/60 font-body">Plese don't forget to check the guidline related to recycling</p>
             </div>
         
-            <div class="bg-transparent text-center p-6 rounded-xl shadow hover:shadow-lg transition">
-              <img src="asset/recycle-eco.png" alt="Reuse Image" class="rounded mb-4"> 
-              <h3 class="text-3xl text-green-800 font-semibold font-body mb-2">Do use Reusables</h3>
-              <p class="font-body text-2xl text-green-900 mb-2">It's always better to carry a reusable bottle rather than single-used plastics.</p>
+            <div class="bg-semi-transparent p-6 rounded-3xl shadow hover:shadow-lg transition flex items-center gap-4">
+              <img src="asset/recycle-eco.png" alt="Reuse Image" class="w-34 h-34 object-contain mr-6 rounded"> 
+              <h3 class="text-4xl text-green-800 font-semibold font-body bg-green-200/60 mb-2">Do use Reusables</h3>
+              <p class="font-body text-3xl bg-yellow-200/60 text-green-900 mb-2">It's always better to carry a reusable bottle rather than single-used plastics.</p>
             </div>
-            <div class="bg-transparent text-center p-6 rounded-xl shadow hover:shadow-lg transition">
-                <img src="asset/plant-eco.png" alt="Plant Image">
-                <h3 class="text-3xl text-green-800 font-body font-semibold mb-2">Love to plant a Tree</h3>
-                <p class="font-body text-2xl text-green-900">Do participate in Environment Activities and plant your own at home.</p>
+
+            <div class="bg-semi-transparent p-6 rounded-3xl shadow hover:shadow-lg transition flex items-center gap-4">
+                <img src="asset/plant-eco.png" alt="Plant Image" class="w-34 h-34 object-contain mr-6 rounded">
+                <h3 class="text-4xl text-green-800 font-body bg-green-200/60 font-semibold mb-2">Love to plant a Tree</h3>
+                <p class="font-body text-3xl bg-yellow-200/60 text-green-900">Do participate in Environment Activities and plant your own at home.</p>
             </div>
+
         </div>
     </div>
     </section>
@@ -130,12 +136,26 @@
     let speed = 80;
 
     function typeEffect() {
-        const typingEl = document
-        if (i < text.length) {
-            document.querySelector(".typing-text").textContent += text.charAt(i);
+        const typingEl = document.querySelector(".typing-text");
+        i++;
+        if (!isDeleting) {
+            typingEl.textContent = text.substring(0, i);
             i++;
-            setTimeout(typeEffect, 100);
+            if (i > text.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1500);
+                return;
+            } 
+            
+        } else {
+            typingEl.textContent = text.substring(0, i);
+            i--;
+            if (i < 0) {
+                isDeleting = false;
+                i = 0;
+            }
         }
+        setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
     }
     window.onload = typeEffect;
 </script>
