@@ -1,4 +1,4 @@
-## ECOTHINK
+## ECOMIND
 This is a website which is simple, easy, and educational for getting some knowledge regarding plant eco-system or getting people aware of how to do planting ! This site contains guides on horticultural concepts, DIY eco-friendly ideas, FAQs, and a pledge section where visitor can submit and do commit to help the environment. 
 
 
